@@ -1,0 +1,146 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css?family=M+PLUS+Rounded+1c');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#wrap {
+    margin: 0 auto;
+    width: 95%;
+    /* padding: 0px 10px; */
+}
+
+/* header */
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 100px;
+    font-family: cursive;
+}
+
+h1 {
+    text-indent: 0.5em;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: goldenrod;
+    border: none;
+    border-radius: 50%;
+    font-family: cursive;
+}
+
+ul {
+    display: none;
+    list-style: none;
+}
+
+a {
+    display: block;
+    text-decoration: none;
+    color: black;
+}
+
+
+/* main */
+section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+h2 {
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+    border-bottom: goldenrod 5px solid;
+    font-family: 'M PLUS Rounded 1c', sans-serif;
+}
+
+h2:last-of-type {
+    margin-top: 30px;
+}
+
+#option  p {
+    width: 49.5%;
+    max-width: 230px;
+}
+
+#option p:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+#option p:nth-of-type(odd):not(:last-of-type) {
+    margin-right: 0.5%;
+}
+
+#option p:nth-of-type(even) {
+    margin-left: 0.5%;
+}
+
+img {
+    width: 100%;
+    /* width: 100%; の場合、親に対しての100％という指示。 */
+    height: 100%;
+    /* width: 100%; height: 100%; の両方を入れると、先に到達するほうが優先される。 */
+    vertical-align: bottom;
+    object-fit: cover;
+    /* 物体の縦横比を変えずにはみ出た部分をカットする。 */
+}
+
+#kinen p {
+    width: 100%;
+    height: 250px;
+    overflow: hidden;
+}
+
+#kinen p:not(:last-of-type) {
+    margin-bottom: 5px;
+}
+
+/* footer */
+footer p {
+    margin: 50px;
+    text-align: right;
+    font-size: 14px;
+    /* font-family: 'Mrs Saint Delafield' */
+}
+
+/* MediaQuery width 640px以上 */
+@media screen and (min-width:640px) {
+    button {
+        display: none;
+    }
+    ul {
+        display: flex;
+    }
+    li {
+        width: 120px;
+        text-align: center;
+    }
+    li:hover {
+        background-color: goldenrod;
+        border: none;
+        border-radius: 50%;
+    }
+
+    #option p:not(:last-of-type) {
+        margin-right: 0.5%;
+    }
+
+    #option p:nth-of-type(even) {
+        margin-left: 0;
+    }
+
+    #kinen {
+        justify-content: space-around;
+    }
+    #kinen p {
+        max-width: 320px;
+        height: 200px;
+    }
+}
